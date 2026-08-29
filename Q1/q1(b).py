@@ -2,17 +2,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# Function f(x)
+
 def f(x):
     return np.exp((x - 1)**2) - 1
 
 
-# First derivative f'(x)
+
 def fp(x):
     return 2 * (x - 1) * np.exp((x - 1)**2)
 
 
-# u(x) = f(x) / f'(x)
+
 def u(x):
     t = x - 1
 
@@ -22,7 +22,7 @@ def u(x):
     return (1 - np.exp(-t**2)) / (2 * t)
 
 
-# Derivative of u(x)
+
 def up(x):
     t = x - 1
 
@@ -32,14 +32,13 @@ def up(x):
     return ((2 * t**2 + 1) * np.exp(-t**2) - 1) / (2 * t**2)
 
 
-# Values of x
+
 x = np.linspace(-1, 3, 1000)
 
-# Remove x = 1 to avoid division by zero in the formula
+
 x_plot = x[np.abs(x - 1) > 1e-10]
 
 
-# Plot u(x)
 u_values = [u(i) for i in x_plot]
 
 plt.figure()
@@ -53,7 +52,6 @@ plt.grid()
 plt.show()
 
 
-# Plot u'(x)
 up_values = [up(i) for i in x_plot]
 
 plt.figure()
@@ -67,7 +65,7 @@ plt.grid()
 plt.show()
 
 
-# Check values at x = 1
+
 print("u(1)  =", u(1))
 print("u'(1) =", up(1))
 

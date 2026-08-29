@@ -2,22 +2,21 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# Function f(x)
 def f(x):
     return np.exp((x - 1)**2) - 1
 
 
-# First derivative f'(x)
+
 def fp(x):
     return 2 * (x - 1) * np.exp((x - 1)**2)
 
 
-# Second derivative f''(x)
+
 def fpp(x):
     return (2 + 4 * (x - 1)**2) * np.exp((x - 1)**2)
 
 
-# Values of x
+
 x = np.linspace(-1, 3, 1000)
 
 
@@ -33,7 +32,7 @@ plt.grid()
 plt.show()
 
 
-# Plot f'(x)
+
 plt.figure()
 plt.plot(x, fp(x))
 plt.axhline(0)
@@ -45,7 +44,7 @@ plt.grid()
 plt.show()
 
 
-# Plot f''(x)
+
 plt.figure()
 plt.plot(x, fpp(x))
 plt.axhline(0)
@@ -57,7 +56,7 @@ plt.grid()
 plt.show()
 
 
-# Check values at x = 1
+
 print("f(1)  =", f(1))
 print("f'(1) =", fp(1))
 print("f''(1) =", fpp(1))

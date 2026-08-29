@@ -20,7 +20,7 @@ def fpp(x):
 x = np.linspace(-1, 3, 1000)
 
 
-# Plot f(x)
+
 plt.figure()
 plt.plot(x, f(x))
 plt.axhline(0)
